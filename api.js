@@ -28,6 +28,7 @@ export default class Api {
   static async updateUser(userId, userData) {
     try {
       const response = await axios.put(`${API_ENDPOINT}/users/${userId}`, userData);
+      userId = null;
       return response.data;
     } catch (error) {
       console.error(`Falló la petición PUT: ${error}`);

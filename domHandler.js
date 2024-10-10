@@ -1,4 +1,3 @@
-
 export default class DOMHandler {
   constructor(container) {
     this.container = container;
@@ -62,6 +61,15 @@ export default class DOMHandler {
       card.addEventListener('click', () => {
         this.fillEditForm(user);
       });
+
+      // Botón para editar usuario
+      const editButton = document.createElement('button');
+      editButton.innerText = 'Editar Usuario';
+      editButton.addEventListener('click', (event) => {
+        event.stopPropagation();
+        this.fillEditForm(user);
+      });
+      card.appendChild(editButton);
 
       this.container.appendChild(card);
     });

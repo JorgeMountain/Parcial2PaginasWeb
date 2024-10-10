@@ -39,6 +39,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         domHandler.showMessage('Usuario creado con éxito');
       }
 
+      // Limpiar el campo userId después de la operación
+      form.userId.value = '';
+
       // Recargar usuarios
       const users = await Api.getUsers();
       domHandler.displayUsers(users);
