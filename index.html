@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Usuarios</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Gestión de Usuarios</h1>
+  </header>
+
+  <main id="userContainer">
+    <!-- Aquí se insertarán dinámicamente los usuarios -->
+  </main>
+
+  <section>
+    <h2>Crear o Editar Usuario</h2>
+    <form id="userForm">
+      <input type="hidden" id="userId" name="userId">
+
+      <label for="firstName">Nombre:</label>
+      <input type="text" id="firstName" name="firstName" required>
+
+      <label for="lastName">Apellido:</label>
+      <input type="text" id="lastName" name="lastName" required>
+
+      <label for="email">Correo Electrónico:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Teléfono:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="jobTitle">Título del Trabajo:</label>
+      <input type="text" id="jobTitle" name="jobTitle" required>
+
+      <button type="submit">Guardar Usuario</button>
+    </form>
+  </section>
+
+  <script type="module" src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</body>
+</html>
